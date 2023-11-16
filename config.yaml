@@ -57,5 +57,6 @@ disableKinds:
   - sitemap
   - 404
 
-# clean destination folder before build
+# a clean destination
+publishDir: docs
 cleanDestinationDir: true
