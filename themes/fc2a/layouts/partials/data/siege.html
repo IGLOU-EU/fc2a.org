@@ -1,0 +1,22 @@
+<ol class="article__data__list center">
+    {{ range .Site.Data.siege.gouvernance.items }}
+    <li class="article__data__list__item">
+        <div class="article__data__list__item__image">
+            <img src="{{ .image }}" alt="Photo de {{ .text }}">
+        </div>
+        <div class="article__data__list__item__text">
+            <div class="article__data__list__item__text__role">{{ .role }}</div>
+            <div class="article__data__list__item__text__name">{{ .text }}</div>
+        </div>
+    </li>
+    {{ end }}
+</ol>
+
+<h2 class="article__data__title center">{{ .Site.Data.siege.bureau.title }}</h2>
+<ol class="article__data__list__office center">
+    {{ range .Site.Data.siege.bureau.items }}
+    <li class="article__data__list__office__item">
+        <p class="article__data__list__office__item__text">{{ . }}</p>
+    </li>
+    {{ end }}
+</ol>

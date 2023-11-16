@@ -1,0 +1,43 @@
+body {
+    font-size: $font_size_base;
+    font-family: $font_family_sansserif;
+}
+
+h1 {
+    color: $color_comment;
+    padding: .2em 1.5em .2em .25em;
+    grid-column: 1 / -1;
+    border-bottom: 1px dotted $color_comment;
+    font-size: $font_size_h1;
+    font-family: $font_family_serif;
+}
+
+h2 {
+    font-size: $font_size_h2;
+    font-family: $font_family_serif;
+}
+
+h3 {
+    font-size: $font_size_h3;
+    font-family: $font_family_sansserif;
+}
+
+a {
+    color: $color_blue;
+
+    &:visited {
+        font-style: italic;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.color-blue {
+    color: $color_blue;
+}

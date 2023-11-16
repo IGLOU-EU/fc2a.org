@@ -1,0 +1,25 @@
+<p class="footer__infos">
+    <a href="{{ relURL "/mentions-legales" }}">Mentions légales</a>
+    <!-- <a href="#contact">Contact</a> -->
+</p>
+<p class="footer__credits">
+    © {{ .Site.Params.TitleTiny }}
+    par <a href="{{ .Site.Data.theme_author.url }}" target="_blank" rel="noopener noreferrer">{{ .Site.Data.theme_author.name }}</a>
+    - tous droits réservés
+</p>
+<ul class="footer__social">
+    {{ if .Site.Data.contact.twitter }}
+    <li>
+        <a href="{{ .Site.Data.contact.twitter }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte Twitter de la FC2A">
+            <svg class="svg_icon"><use href="#svg_twitter" xlink:href="#svg_twitter" /></svg>
+        </a>
+    </li>
+    {{ end }}
+    {{ if .Site.Data.contact.linkedin }}
+    <li>
+        <a href="{{ .Site.Data.contact.linkedin }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte LinkedIn de la FC2A">
+            <svg class="svg_icon"><use href="#svg_linkedin" xlink:href="#svg_linkedin" /></svg>
+        </a>
+    </li>
+    {{ end }}
+</ul>

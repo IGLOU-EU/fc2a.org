@@ -1,0 +1,22 @@
+title: "Le commerce agricole et agroalimentaire en chiffres"
+items:
+  - icon: "/images/icons/france.svg"
+    text: "Emplois directs"
+    number: "25 000"
+    weight: 1
+  - icon: "/images/icons/france.svg"
+    text: "Fédérations"
+    number: "4"
+    weight: 2
+  - icon: "/images/icons/france.svg"
+    text: "Entreprises réparties sur l'ensemble du territoire"
+    number: "1 000"
+    weight: 3
+  - icon: "/images/icons/france.svg"
+    text: "Milliards d'€ de CA"
+    number: "15"
+    weight: 4
+  - icon: "/images/icons/france.svg"
+    text: "Agriculteurs sur 2 est en lien avec la FC2A"
+    number: "1"
+    weight: 5

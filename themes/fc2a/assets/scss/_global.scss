@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    color: $color_foreground;
+    background-color: $color_white;
+    min-width: $glob_min_width;
+}
+
+.header,
+.main,
+.footer {
+    max-width: $glob_max_width;
+    margin: 0 auto;
+    padding: 0 $font_size_base;
+}
+
+.header {
+    padding: 1em 0;
+    display: grid;
+    gap: $font_size_base;
+    grid-template-columns: 1fr auto;
+
+    @media (max-width: $glob_small_width) {
+        grid-template-columns: 1fr;
+
+        &__social {
+            display: none;
+        }
+    }
+
+    &__logo,
+    &__social {
+        height: $glob_header_height;
+
+        .icon_link {
+            width: $glob_header_height;
+            height: $glob_header_height;
+        }
+    }
+
+    &__nav {
+        grid-column: 1 / -1;
+        font-family: $font_family_sansserif;
+        background-color: $color_blue_light;
+
+        &__list {
+            display: flex;
+            justify-content: space-evenly;
+
+            &__link {
+                color: $color_white;
+                padding: 1em 1em;
+                display: block;
+                transition: background-color 0.2s;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $color_blue;
+                }
+            }
+
+            @media (max-width: $glob_medium_width) {
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.chiffres {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $font_size_h1;
+
+        &__item {
+            gap: $font_size_base;
+            color: $color_blue;
+            width: 30%;
+            border: 1px solid $color_blue_light;
+            display: grid;
+            overflow: hidden;
+            min-width: 18em;
+            border-radius: 5em;
+            grid-template-columns: min-content 1fr;
+
+            .container {
+                place-self: center auto;
+            }
+
+            &__text {
+                font-style: italic;
+                font-weight: bold;
+                font-family: $font_family_serif;
+            }
+
+            &__number {
+                font-size: $font_size_h1;
+                font-family: $font_family_sansserif;
+            }
+
+            &__icon {
+                width: 5em;
+                height: 5em;
+                padding: .5em;
+                border-radius: 5em;
+                background-color: $color_blue_light;
+
+                svg {
+                    fill: $color_white;
+                }
+            }
+        }
+    }
+}
+
+.article {
+    // exept the last mage bottom 3em
+    &:not(:last-child) {
+        margin-bottom: 3em;
+    }
+
+    &__container {
+        gap: $font_size_base;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: $glob_medium_width) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__sub-content__item {
+        gap: $font_size_base;
+        display: grid;
+        grid-template-columns: 10em 1fr;
+        padding: $font_size_base;
+        border-bottom: 2px dotted $color_blue_light;
+        margin-bottom: $font_size_base;
+
+        &__side__logo {
+            text-align: center;
+        }
+
+        &__side__link {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: $glob_small_width) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__data {
+        &__list {
+            gap: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: $font_size_h1;
+
+            &__item {
+                &__image {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    height: 15em;
+                    width: 15em;
+                    margin: 1em;
+
+                    img {
+                        transition: transform 0.2s;
+                    
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            
+                &__text {
+                    padding: $font_size_small;
+                    border: 1px solid $color_blue_light;
+
+                    &__role {
+                        font-weight: bold;
+                        font-size: $font_size_h4;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            &__office {
+                &__item{
+                    display: block;
+                    font-size: $font_size_h4;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        &__video {
+            &__items {
+                gap: $font_size_base;
+                display: flex;
+
+                @media (max-width: $glob_small_width) {
+                    flex-direction: column;
+                }
+            }
+
+            &__item {
+                &__overlay {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 1em;
+
+                    svg {
+                        position: absolute;
+                        display: block;
+                        top: 20%;
+                        left: 20%;
+                        width: 60%;
+                        height: 60%;
+                        fill: $color_blue_light;
+                        transition: transform 0.2s;
+                    }
+                }
+
+                &__text {
+                    font-size: $font_size_h4;
+                    font-weight: bold;
+                    text-align: center;
+                    display: inline-block;
+                    margin: 1em;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    svg {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#recrutement .article{
+    &__content {
+        font-size: $font_size_h4;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__data__list {
+        gap: $font_size_base / 2;
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(5, 1fr);
+
+        &__item__id {
+            font-weight: bold;
+            font-size: $font_size_h2;
+            height: $font_size_h2 * 2;
+            width: $font_size_h2 * 2;
+            margin: .5em auto;
+            display: grid;
+            align-content: center;
+            background-color: $color_blue;
+            color: $color_white;
+            border-radius: 50%;
+        }
+
+        @media (max-width: $glob_small_width) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.data_contact {
+    font-size: $font_size_h3;
+}
+
+.icon_link {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+
+    svg {
+        fill: $color_comment;
+        transition: fill 0.2s;
+
+        &:hover,
+        &:focus,
+        &:active {
+            fill: $color_blue;
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 1px $font_size_base;
+    font-family: $font_family_sansserif;
+    color: $color_white;
+    background-color: $color_blue_light;
+    font-weight: bold;
+    margin-top: 3em;
+
+    &__credits {
+        text-align: center;
+    }
+
+    &__social {
+        text-align: right;
+    }
+
+    a {
+        color: $color_white;
+    }
+
+    .icon_link svg {
+        fill: $color_white;
+    }
+
+    @media (max-width: $glob_small_width) {
+        grid-template-columns: 1fr;
+        gap: $font_size_base;
+
+        &__infos,
+        &__social,
+        &__credits {
+            text-align: center;
+        }
+    }
+}

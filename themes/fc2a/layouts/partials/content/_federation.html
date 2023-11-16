@@ -1,0 +1,40 @@
+{{ range sort (where .Site.Pages "Section" "_federation") ".Params.weight" "asc" }}
+{{ if not .IsPage }}
+    {{ continue }}
+{{ end }}
+
+<div class="article__sub-content__item">
+    <div class="article__sub-content__item__side">
+        <div class="article__sub-content__item__side__logo">
+            <img src="{{ .Params.logo }}" alt="Logo de la fédération {{ .Params.acro }}">
+        </div>
+        <div class="article__sub-content__item__side__link">
+            {{ if .Params.Links.web }}
+            <a href="{{ .Params.Links.web }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Site web de la fédération {{ .Params.acro }}">
+                <svg class="svg_icon"><use href="#svg_web" xlink:href="#svg_web" /></svg>
+            </a>
+            {{ end }}
+            {{ if .Params.Links.twitter }}
+            <a href="{{ .Params.Links.twitter }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte Twitter de la fédération {{ .Params.acro }}">
+                <svg class="svg_icon"><use href="#svg_twitter" xlink:href="#svg_twitter" /></svg>
+            </a>
+            {{ end }}
+            {{ if .Params.Links.linkedin }}
+            <a href="{{ .Params.Links.linkedin }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte LinkedIn de la fédération {{ .Params.acro }}">
+                <svg class="svg_icon"><use href="#svg_linkedin" xlink:href="#svg_linkedin" /></svg>
+            </a>
+            {{ end }}
+            {{ if .Params.Links.facebook }}
+            <a href="{{ .Params.Links.facebook }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte Facebook de la fédération {{ .Params.acro }}">
+                <svg class="svg_icon"><use href="#svg_facebook" xlink:href="#svg_facebook" /></svg>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="article__sub-content__item__main">
+        <h3 class="article__sub-content__item__main__title">{{ .Title }}</h3>
+        <div class="article__sub-content__item__main__content">{{ .Content }}</div>
+    </div>
+</div>
+
+{{ end }}

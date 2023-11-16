@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+<!-- use data "en_chiffres" to display the "en chiffres" section -->
+{{ if .Site.Data.en_chiffres }}
+<article class="article chiffres module_chiffres" id="chiffres">
+    <h1 class="chiffres__title">{{ .Site.Data.en_chiffres.title }}</h1>
+    <div class="chiffres__content">
+        {{ range sort .Site.Data.en_chiffres.items "weight" }}
+        <div class="chiffres__content__item">
+            <div class="chiffres__content__item__icon">
+                <img src="{{ .icon }}" alt="Icon decoratif">
+            </div>
+            <div class="container">
+                <div class="chiffres__content__item__number">{{ .number }}</div>
+                <div class="chiffres__content__item__text">{{ .text }}</div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</article>
+{{ end }}
+
+{{ range sort (where .Site.Pages "Section" "_parts") ".Params.weight" "asc" }}
+{{ if not .IsPage }}
+    {{ continue }}
+{{ end }}
+
+<article class="article" id="{{ .Slug }}">
+    {{ if .Params.Image }}
+    <div class="article__container">
+    {{ end }}
+        
+    {{ if .Title }}
+    <h1 class="article__title">{{ .Title }}</h1>
+    {{ end }}
+
+    {{ if .Content }}
+    <div class="article__content">{{ .Content }}</div>
+    {{ end }}
+
+    {{ if .Params.Data }}
+    <div class="article__data data_{{ .Params.Data }}">
+        {{ partial (printf "data/%s.html" .Params.Data) . }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.Content }}
+    <div class="article__sub-content sub-content_{{ .Params.Content }}">
+        {{ partial (printf "content/%s.html" .Params.Content) . }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.Image }}
+        <img class="article__container__image" src="{{ .Params.Image.Path }}" alt="{{ .Params.Image.Alt }}">
+    </div>
+    {{ end }}
+</article>
+
+{{ end }}
+{{ end }}

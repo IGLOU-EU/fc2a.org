@@ -1,0 +1,11 @@
+{{- $Data := (index $.Site.Data (index .Params 0) ) -}}
+
+{{ if $Data.url }}**[{{ $Data.nom }}]({{ $Data.url }})**   {{ else }}**{{ $Data.nom }}**   {{ end }}
+{{ if $Data.siren }}**N° SIREN** : {{ $Data.siren }}   {{ end }}
+
+{{ if $Data.siege }}**Siège social** :   
+{{ $Data.siege }}   {{ end }}
+
+{{ if $Data.email }}**E-mail** : {{ $Data.email }}   {{ end }}
+{{ if $Data.tel }}**Téléphone** : {{ $Data.tel }}   {{ end }}
+{{ if $Data.fax }}**Télécopie** : {{ $Data.fax }}   {{ end }}

@@ -1,0 +1,11 @@
+name: "Fc2a"
+license: GNU General Public License v3.0 or later
+licenselink: https://www.gnu.org/licenses/gpl-3.0.fr.html
+description: "Fc2a est un thème Hugo pour le site de la Fédération du commerce agricole et agroalimentaire."
+homepage: "https://fc2a.org/"
+min_version: "0.41.0"
+disableHugoGeneratorInject: true
+
+author:
+  name: "Iglou.eu - Adrien Kara"
+  homepage: "https://iglou.eu/"

@@ -1,0 +1,12 @@
+{{ $targetCSS := (printf "css/%s.css" .) }}
+{{ $targetSCSS := (printf "scss/%s.scss" .) }}
+
+{{ $opt := (dict "transpiler" "libsass" "targetPath" $targetCSS) }}
+{{ if eq hugo.Environment "development" }}
+{{ $opt = merge $opt (dict "enableSourceMap" true) }}
+{{ else }}
+{{ $opt = merge $opt (dict "outputStyle" "compressed") }}
+{{ end }}
+
+{{ $scss := resources.Get $targetSCSS | toCSS $opt}}
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}">

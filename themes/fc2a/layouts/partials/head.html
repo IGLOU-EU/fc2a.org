@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+
+<title>
+    {{ if .IsHome }}
+    {{ .Site.Title }}
+    {{ else }}
+    {{ .Site.Params.TitleTiny }} - {{ .Title }}
+    {{ end }}
+</title>
+
+{{ hugo.Generator }}
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,viewport-fit=cover">
+<meta name="author" content="{{ .Site.Params.Author }}">
+<meta name="revised" content="{{ now.Format "Monday, January 2nd, 2006, 3:04 pm" }}">
+<meta name="theme-color" content="{{ .Site.Params.ThemeColor }}">
+<meta name="description" content="{{ .Site.Params.Description }}">
+
+<link rel="icon" type="image/png" href="{{ relURL "favicon.png" }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ if hugo.IsExtended }}
+    {{ partial "libscss" "main" }}
+{{ end }}

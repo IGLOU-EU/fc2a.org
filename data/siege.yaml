@@ -1,0 +1,22 @@
+gouvernance:
+  title: "La gouvernance FC2A"
+  items:
+    - image: "/images/photos/gp.jpg"
+      text: "Gérard Poyer"
+      role: "Président"
+      weight: 1
+    - image: "/images/photos/ap.jpg"
+      text: "Antoine Pissier"
+      role: "Vice-président"
+      weight: 2
+    - image: "/images/photos/mm.jpg"
+      text: "Marc Morellato"
+      role: "Trésorier"
+      weight: 3
+
+bureau:
+  title: "Membres du bureau"
+  items:
+    - "Christophe Marchais"
+    - "Dominique Truffaut"
+    - "Régis Lhoutellier"

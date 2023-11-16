@@ -1,0 +1,25 @@
+<div class="center article__map">
+    <a href="https://osm.org/go/0BOd3qFWW?m=" target="_blank" rel="noopener noreferrer" class="link" title="Ouvrir la carte dans OpenStreetMap">
+        <img src="{{ relURL "images/content/map.png" }}" alt="Carte de localisation de la FC2A" class="map">
+    </a>
+</div>
+
+<p class="center bold">{{ .Site.Data.contact.address }}</p>
+
+<p class="center bold">
+    Tél. : <a href="tel:{{ .Site.Data.contact.phone_33 }}" class="link">{{ .Site.Data.contact.phone }}</a></br>
+    Email : <a href="mailto:{{ .Site.Data.contact.email }}" class="link">{{ .Site.Data.contact.email }}</a>
+</p>
+
+<p class="center bold">
+    {{ if .Site.Data.contact.twitter }}
+    <a href="{{ .Site.Data.contact.twitter }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte Twitter de la FC2A">
+        <svg class="svg_icon"><use href="#svg_twitter" xlink:href="#svg_twitter" /></svg>
+    </a>
+    {{ end }}
+    {{ if .Site.Data.contact.linkedin }}
+    <a href="{{ .Site.Data.contact.linkedin }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte LinkedIn de la FC2A">
+        <svg class="svg_icon"><use href="#svg_linkedin" xlink:href="#svg_linkedin" /></svg>
+    </a>
+    {{ end }}
+</p>

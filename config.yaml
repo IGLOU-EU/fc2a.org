@@ -1,0 +1,61 @@
+baseURL: https://fc2a.org/
+languageCode: fr
+
+theme: fc2a
+title: FC2A - Fédération du commerce agricole et agroalimentaire
+
+# Custom params
+params:
+  logo: /logos/fc2a_complet.png
+  author: Iglou.eu - Adrien Kara
+  titleTiny: FC2A
+  themeColor: "#2faadb"
+  languageDir: ltr
+  description: La Fédération du commerce agricole et agroalimentaire (FC2A) est une organisation professionnelle qui regroupe les entreprises de commerce de produits agricoles et agroalimentaires. Elle représente les intérêts de ses adhérents auprès des pouvoirs publics et des organisations professionnelles françaises et européennes.
+
+# Configuration du SEO
+paginate: 10
+canonifyURLs: true
+summaryLength: 50
+metaDataFormat: "yaml"
+enableRobotsTXT: true
+
+# allow raw html in markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# minify html
+minify:
+  minifyOutput: true
+  minifyHTMLOptions:
+    keepClosingSlash: true
+    keepDefaultAttrVals: false
+    keepDocumentTags: true
+    keepEndTags: false
+    keepQuotes: false
+    keepWhitespace: false
+    keepWhitespaceInBNF: false
+    minifyCSS: true
+    removeComments: true
+    removeOptionalTags: false
+    removeRedundantAttributes: true
+    removeScriptTypeAttributes: true
+    removeStyleLinkTypeAttributes: true
+    useShortDoctype: true
+
+# disable the taxonomy generations
+taxonomies:
+  tag: ""
+  group: ""
+  category: ""
+
+disableKinds:
+  - taxonomy
+  - RSS
+  - sitemap
+  - 404
+
+# clean destination folder before build
+cleanDestinationDir: true

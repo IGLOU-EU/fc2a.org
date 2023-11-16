@@ -1,0 +1,53 @@
+// # Sizes definition
+// ## Global
+$glob_max_width: 1200px;
+$glob_medium_width: 768px;
+$glob_small_width: 576px;
+$glob_min_width: 290px;
+
+// ## Header
+$glob_header_height: 44px;
+
+// # Colors definition
+// vibrant colors liked by the client in 2021
+// ## Background
+$color_background: #fefefe;
+// ## Current Line
+$color_current_line: #e8e8e8;
+// ## Foreground
+$color_foreground: #333333;
+// ## Comment
+$color_comment: #999999;
+// ## Black
+$color_black: #000;
+// ## White
+$color_white: #fff;
+// ## Blue
+$color_blue: #1d7ea5;
+$color_blue_light: #2faadb;
+
+// # Fonts definitions
+// ## size
+// ### base is considered 11pt
+$font_size_base: 1rem;
+// ### h1 is considered 30pt
+$font_size_h1: 2rem;
+// ### h2 is considered 18pt
+$font_size_h2: 1.62rem;
+// ### h3 is considered 15pt
+$font_size_h3: 1.36rem;
+// ### h4 is considered 12pt
+$font_size_h4: 1.09rem;
+// ### quote is considered 15pt
+$font_size_quote: 1.36rem;
+// ### small is considered 9pt
+$font_size_small: 0.82rem;
+// ## family
+// ### serif
+$font_family_serif: 'Garamond',
+'Times New Roman',
+serif;
+// ### sans-serif
+$font_family_sansserif: 'Trebuchet MS',
+'Arial',
+sans-serif;

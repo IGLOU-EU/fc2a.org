@@ -1,0 +1,29 @@
+<div class="header__logo">
+    <a href="{{ .Site.BaseURL }}" title="Revenir à l'accueil">
+        <img src="{{ .Site.Params.Logo }}" alt="{{ .Site.Params.TitleTiny }}">
+    </a>
+</div>
+<div class="header__social">
+    {{ if .Site.Data.contact.twitter }}
+    <a href="{{ .Site.Data.contact.twitter }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte Twitter de la FC2A">
+        <svg class="svg_icon"><use href="#svg_twitter" xlink:href="#svg_twitter" /></svg>
+    </a>
+    {{ end }}
+    {{ if .Site.Data.contact.linkedin }}
+    <a href="{{ .Site.Data.contact.linkedin }}" target="_blank" rel="noopener noreferrer" class="icon_link" title="Compte LinkedIn de la FC2A">
+        <svg class="svg_icon"><use href="#svg_linkedin" xlink:href="#svg_linkedin" /></svg>
+    </a>
+    {{ end }}
+</div>
+<nav class="header__nav">
+    <ul class="header__nav__list">
+        {{ range sort (where .Site.Pages "Section" "_parts") ".Params.weight" "asc" }}
+        {{ if not .IsPage }}
+            {{ continue }}
+        {{ end }}
+        <li>
+            <a class="header__nav__list__link" href="{{ relURL "/" }}#{{ .Slug }}">{{ .Params.Title_menu }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
