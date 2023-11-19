@@ -1,7 +1,7 @@
 ---
 slug: "siege"
 title: "La gouvernance FC2A"
-title_menu: "Le siege"
+title_menu: "La gouvernance"
 weight: 4
 data: "siege"
 
