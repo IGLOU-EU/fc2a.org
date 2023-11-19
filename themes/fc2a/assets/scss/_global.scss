@@ -5,6 +5,10 @@ body {
     min-width: $glob_min_width;
 }
 
+#fc2a .article__title {
+    margin-bottom: 0;
+}
+
 .header,
 .main,
 .footer {
