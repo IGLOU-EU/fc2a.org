@@ -2,7 +2,7 @@
 
 <!-- use data "en_chiffres" to display the "en chiffres" section -->
 {{ if .Site.Data.en_chiffres }}
-<article class="article chiffres module_chiffres" id="chiffres">
+<article class="article chiffres module_chiffres" id="chiffres" style="margin-bottom: 1em;">
     <h1 class="chiffres__title">{{ .Site.Data.en_chiffres.title }}</h1>
     <div class="chiffres__content">
         {{ range sort .Site.Data.en_chiffres.items "weight" }}

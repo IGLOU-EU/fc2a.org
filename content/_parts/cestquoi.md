@@ -1,6 +1,6 @@
 ---
 slug: "fc2a"
-title: "La FC2A, c’est quoi ?"
+title: ""
 title_menu: "Présentation"
 image: 
     alt: "Graphique de représentation des métiers de la FC2A"
