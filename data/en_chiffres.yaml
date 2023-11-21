@@ -1,22 +1,23 @@
-title: "Le commerce agricole et agroalimentaire en chiffres"
+# title: "Le commerce agricole et agroalimentaire en chiffres"
+title: "La FC2A, c’est quoi ?"
 items:
-  - icon: "/images/icons/france.svg"
+  - icon: "/images/icons/mallette.png"
     text: "Emplois directs"
     number: "25 000"
     weight: 1
-  - icon: "/images/icons/france.svg"
+  - icon: "/images/icons/grange.png"
     text: "Fédérations"
     number: "4"
     weight: 2
-  - icon: "/images/icons/france.svg"
+  - icon: "/images/icons/france.png"
     text: "Entreprises réparties sur l'ensemble du territoire"
     number: "1 000"
     weight: 3
-  - icon: "/images/icons/france.svg"
+  - icon: "/images/icons/euro.png"
     text: "Milliards d'€ de CA"
     number: "15"
     weight: 4
-  - icon: "/images/icons/france.svg"
+  - icon: "/images/icons/agriculteur.png"
     text: "Agriculteurs sur 2 est en lien avec la FC2A"
     number: "1"
     weight: 5
