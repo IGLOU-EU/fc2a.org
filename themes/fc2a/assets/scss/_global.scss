@@ -125,6 +125,10 @@ body {
                     fill: $color_white;
                 }
             }
+
+            @media (max-width: $glob_small_width) {
+                width: 100%;
+            }
         }
     }
 }
