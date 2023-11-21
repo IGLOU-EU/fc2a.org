@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}" dir="{{ .Site.Params.LanguageDir | default "ltr" }}">
+    <head>
+    {{- partial "head.html" . -}}
+    <!-- <meta http-equiv="refresh" content="0; URL=''" /> -->
+</head>
+    <body>
+        <header id="header" class="header">
+        {{- partial "header.html" . -}}
+        </header>
+        <main id="main" class="main">
+        <article class="article" id="_404_">
+            <h1>Erreur 404</h1>
+            <h2 class="center">Oups, impossible de trouver ce champ !</h2>
+            <p class="center">Vous avez probablement semé une <b>Mauvaise URL</b>, du coup, vous avez récolté une plante <b>Erreur 404</b>.</p>
+            <img src="/images/content/404.png" alt="une mauvaise graines qui pousse et qui donne une plante a 404 feuilles">
+        </article>
+        </main>
+        <footer id="footer" class="footer">
+        {{- partial "footer.html" . -}}
+        </footer>
+        {{- partial "scripts.html" . -}}
+    </body>
+</html>

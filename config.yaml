@@ -1,4 +1,4 @@
-baseURL: https://www.fc2a.fr/
+baseURL: //www.fc2a.fr/
 languageCode: fr
 
 theme: fc2a
@@ -55,7 +55,6 @@ disableKinds:
   - taxonomy
   - RSS
   - sitemap
-  - 404
 
 # a clean destination
 publishDir: docs
